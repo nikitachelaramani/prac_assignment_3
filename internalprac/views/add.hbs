@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Vehicle Details</title>
+</head>
+
+<body>
+    <form action="/add" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <th> Vehicle Brand :</th>
+                <td><input type="text" name="brand" /><br></td>
+            </tr>
+            <tr>
+                <th>Category name :</th>
+                <td><select name="category">
+                        {{#each cat}}
+                        <option value={{this.category_name}}>
+                            {{this.category_name}}
+                        </option>
+                        {{/each}}
+                    </select></td>
+            </tr>
+            <tr>
+                <th>Picture :</th>
+                <td><input type="file" name="image" /></td>
+            </tr>
+            <tr>
+                <th>Price :</th>
+                <td><input type="number" name="price" /></td>
+            </tr>
+            <tr>
+                <th>Depreciation :</th>
+                <td><input type="number" name="desc" /></td>
+            </tr>
+            <tr>
+                <th>Number of years :</th>
+                <td><input type="number" name="noy" /></td>
+            </tr>
+            {{!-- <tr>
+                <th>total price</th>
+                <td><input type="number" name="total"></td>
+            </tr>           --}}
+        </table>
+        <tr>
+           <button type="submit">Submit</button>
+        </tr>          
+    </form>
+</body>
+
+</html>

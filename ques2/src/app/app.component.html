@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg mb-5">
+  <div class="container-fluid bg-light" >
+    <a class="navbar-brand" style="color:palevioletred;">Your Shopping Cart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  " id="navbarNav" >
+      <ul class="navbar-nav " >
+        <li class="nav-item ">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']" style="color:palevioletred ;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/Product-add']" style="color:palevioletred;">Add Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  [routerLink]="['/Product-list']" style="color:palevioletred ;">List Product Details</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

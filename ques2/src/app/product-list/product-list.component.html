@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <table class="table table-sm">
+    <thead class="table-dark">
+      <tr>
+        <th>Product Name</th>
+        <th>Color</th>
+        <th>Price</th>  
+        <th>Warranty</th>
+        <th>EDIT / DELETE </th>
+      </tr>
+
+      <tr></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of products " >
+        <td>{{ i.Pname }}</td>
+        <td>{{ i.color }}</td>
+        <td>{{ i.price }}</td>
+        <td>{{ i.warranty }}</td>
+        <td><a class="btn btn-danger" (click)="ondelete(i._id)">Delete</a> &nbsp;
+        <a class="btn btn-primary" [routerLink]="['/Product-edit',i._id]">Edit</a></td>        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
